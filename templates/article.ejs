@@ -14,16 +14,11 @@
           <h1 class="article-title"><%= $article.title %></h1>
           <div class="article-info">
             <div>
-              <span
-                >Created At：<time datetime="<%- $article.createdAt %>"
-                  ><%= moment($article.createdAt).format($page.dateFormat) %></time
-                ></span
-              >
-              <span
-                >Updated At：<time datetime="<%- $article.updatedAt %>"
-                  ><%= moment($article.updatedAt).format($page.dateFormat) %></time
-                ></span
-              >
+              Published <time datetime="<%- $article.createdAt %>"
+              ><%= moment($article.createdAt).format($page.dateFormat) %></time
+              ><% if ($article.createdAt !== $article.updatedAt) { %>, updated <time datetime="<%- $article.updatedAt %>"
+                ><%= moment($article.updatedAt).format($page.dateFormat) %></time
+                ><% } %>.</span
             </div>
             <% if ($article.tags.length > 0) {%>
             <div>
