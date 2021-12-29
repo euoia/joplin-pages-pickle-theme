@@ -449,6 +449,8 @@ template {
   font-family: "Lucida Console", "Liberation Mono", Menlo, Monaco, Roboto,
     apple-system, "Helvetica Neue", Arial, "Helvetica Neue", "PingFang SC",
     "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+  line-height: 1.4;
+  font-size: 0.8em;
 }
 
 .article-info span {
